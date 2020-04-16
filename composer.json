@@ -1,0 +1,30 @@
+{
+    "name": "pixelfear/laravel-view-debug",
+    "description": "Debug Laravel views",
+    "license": "MIT",
+    "require-dev": {
+        "orchestra/testbench": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pixelfear\\ViewDebug\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pixelfear\\ViewDebug\\ViewDebugServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
