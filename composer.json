@@ -2,6 +2,9 @@
     "name": "pixelfear/laravel-view-debug",
     "description": "Debug Laravel views",
     "license": "MIT",
+    "require": {
+        "laravel/framework": "^6.10 || ^7.0"
+    },
     "require-dev": {
         "orchestra/testbench": "^5.0"
     },
