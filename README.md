@@ -2,6 +2,8 @@
 
 Adds HTML comments to the start and end of each view, so you can more easily keep track of what's being used.
 
+[Inspired by this feature request.](https://github.com/statamic/ideas/issues/139)
+
 ## Example
 
 You may have a Blade file like this:
