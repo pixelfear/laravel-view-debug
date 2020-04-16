@@ -35,7 +35,7 @@ Of course, since they are HTML comments, it will look no different unless you vi
 You can install the package via composer:
 
 ```bash
-composer require pixelfear/laravel-view-debug
+composer require pixelfear/laravel-view-debug --dev
 ```
 
 ## Usage
