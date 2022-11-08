@@ -19,7 +19,6 @@ jobs:
         exclude:
           - laravel: 9.*
             php: 7.4
-        exclude:
           - laravel: 9.*
             php: 7.3
 
