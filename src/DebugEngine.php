@@ -3,9 +3,12 @@
 namespace Pixelfear\ViewDebug;
 
 use Illuminate\Contracts\View\Engine;
+use Illuminate\Support\Traits\ForwardsCalls;
 
 class DebugEngine implements Engine
 {
+    use ForwardsCalls;
+
     protected $engine;
 
     public function __construct($engine)
@@ -22,8 +25,10 @@ class DebugEngine implements Engine
         ]);
     }
 
-    public function forgetCompiledOrNotExpired()
+    public function __call($method, $parameters)
     {
-        return $this->engine->forgetCompiledOrNotExpired();
+        $return = $this->forwardCallTo($this->engine, $method, $parameters);
+
+        return $return === $this->engine ? $this : $return;
     }
 }
