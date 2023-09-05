@@ -21,4 +21,9 @@ class DebugEngine implements Engine
             $path
         ]);
     }
+
+    public function forgetCompiledOrNotExpired()
+    {
+        return $this->engine->forgetCompiledOrNotExpired();
+    }
 }
