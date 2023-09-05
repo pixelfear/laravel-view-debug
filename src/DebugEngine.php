@@ -27,8 +27,6 @@ class DebugEngine implements Engine
 
     public function __call($method, $parameters)
     {
-        $return = $this->forwardCallTo($this->engine, $method, $parameters);
-
-        return $return === $this->engine ? $this : $return;
+        return $this->forwardDecoratedCallTo($this->engine, $method, $parameters);
     }
 }
