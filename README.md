@@ -43,3 +43,7 @@ composer require pixelfear/laravel-view-debug --dev
 ## Usage
 
 This package will be enabled while your app is in debug mode.
+
+## Livewire
+
+This package will conflict with Livewire because it would result in components having more than a single root node.

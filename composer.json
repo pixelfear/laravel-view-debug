@@ -28,6 +28,9 @@
             ]
         }
     },
+    "conflict": {
+        "livewire/livewire": "*"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
