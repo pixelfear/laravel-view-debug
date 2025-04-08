@@ -5,11 +5,12 @@ namespace Tests;
 use BadMethodCallException;
 use Illuminate\Contracts\View\Engine;
 use Mockery;
+use PHPUnit\Framework\Attributes\Test;
 use Pixelfear\ViewDebug\DebugEngine;
 
 class DebugEngineTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_forwards_calls_to_engine()
     {
         $mock = Mockery::mock(Engine::class);
@@ -20,7 +21,7 @@ class DebugEngineTest extends TestCase
         $this->assertEquals('baz', $engine->foo('bar'));
     }
 
-    /** @test */
+    #[Test]
     public function it_forwards_calls_to_engine_and_allows_fluency()
     {
         $mock = Mockery::mock(Engine::class);
@@ -31,7 +32,7 @@ class DebugEngineTest extends TestCase
         $this->assertSame($engine, $engine->foo('bar'));
     }
 
-    /** @test */
+    #[Test]
     public function it_throw_bad_method_call_exception()
     {
         $this->expectException(BadMethodCallException::class);

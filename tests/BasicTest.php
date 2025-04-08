@@ -3,6 +3,8 @@
 namespace Tests;
 
 use Illuminate\Support\Facades\View;
+use Orchestra\Testbench\Attributes\DefineEnvironment;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class BasicTest extends TestCase
@@ -13,10 +15,8 @@ class BasicTest extends TestCase
         View::addLocation(__DIR__.'/fixtures/views');
     }
 
-    /**
-     * @test
-     * @environment-setup debugEnabled
-     **/
+    #[Test]
+    #[DefineEnvironment('debugEnabled')]
     function it_adds_comments_when_debug_mode_is_enabled()
     {
         $dir = __DIR__.'/fixtures/views';
@@ -33,7 +33,7 @@ CONTENTS;
         $this->assertEquals($expected, view('view')->render());
     }
 
-    /** @test */
+    #[Test]
     function it_doesnt_add_comments_when_debug_mode_is_disabled()
     {
         $expected = <<<CONTENTS
